@@ -28,11 +28,17 @@ Para diseñar el sistema utilizando exclusivamente **lógica combinacional pura*
 ### Función Lógica del Sistema
 La condición de Alerta Roja ($S$) se define formalmente con la siguiente ecuación:
 
-$$S = (A \lor B \lor C \lor D) \land \neg E$$
+$$Z = (A \lor B \lor C \lor D) \land \neg E$$
 
 ### Desglose de los Operadores Lógicos:
 * **$\lor$ (OR / O inclusivo):** Utilizado en el bloque $(A \lor B \lor C \lor D)$. Funciona como un selector múltiple: si se detecta un objeto en *cualquier* punto cardinal, toda esta sección se vuelve verdadera ($1$).
 * **$\neg$ (NOT / Negación):** Aplicado sobre la señal IFF ($\neg E$). Su función es invertir el estado del código de identificación para detectar específicamente cuando la aeronave **no** cuenta con autorización válida.
-* **$\land$ (AND / Y lógico):** Es la compuerta final que vincula las dos condiciones indispensables. Exige obligatoriamente que haya presencia en el espacio aéreo **Y AL MISMO TIEMPO** que el código IFF no sea válido para disparar la Alerta Roja ($S = 1$).
+* **$\land$ (AND / Y lógico):** Es la compuerta final que vincula las dos condiciones indispensables. Exige obligatoriamente que haya presencia en el espacio aéreo **Y AL MISMO TIEMPO** que el código IFF no sea válido para disparar la Alerta Roja ($Z = 1$).
+
+### Tabla de verdad
+
+A | B | C | D | E | A+B+C+D |  \neg E$$ | Z 
+0 | 0 | 0 | 0 | 0 |    0    | 1         | 0
+
 
 
