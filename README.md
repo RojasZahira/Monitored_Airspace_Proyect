@@ -26,7 +26,7 @@ Al no utilizar microcontroladores ni ciclos de reloj (circuitos secuenciales), e
 Para diseñar el sistema utilizando exclusivamente **lógica combinacional pura**, se aplicaron las leyes del Álgebra de Boole.
 
 ### Función Lógica del Sistema
-La condición de Alerta Roja ($S$) se define formalmente con la siguiente ecuación:
+La condición de Alerta Roja ($Z$) se define formalmente con la siguiente ecuación:
 
 $$Z = (A \lor B \lor C \lor D) \land \neg E$$
 
