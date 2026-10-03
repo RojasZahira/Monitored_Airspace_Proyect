@@ -38,7 +38,7 @@ $$Z = (A \lor B \lor C \lor D) \land \neg E$$
 ### Tabla de verdad
 ## 📊 Tabla de Verdad del Sistema
 
-| $A$ (Norte) | $B$ (Sur) | $C$ (Este) | $D$ (Oeste) | $E$ (IFF Válido) | Presencia $(A \lor B \lor C \lor D)$ | $\neg E$ | Salida Alerta ($S$) | Estado del Espacio Aéreo |
+| $A$ (Norte) | $B$ (Sur) | $C$ (Este) | $D$ (Oeste) | $E$ (IFF Válido) | Presencia $(A \lor B \lor C \lor D)$ | $\neg E$ | Salida Alerta ($Z$) | Estado del Espacio Aéreo |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | **0** | Seguro (Sin blancos) |
 | 0 | 0 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Oeste** |
