@@ -17,8 +17,8 @@ Al no utilizar microcontroladores ni ciclos de reloj (circuitos secuenciales), e
 * **E (Códifo IFF):** 1 si el código de transpondedor es válido (Amigo), $0$ si es desconocido o no responde (Amenaza). 
 
 ### Salidas (Indicadores)
-* **LEDs de Sector (A, B, C):** Indican visualmente el sector donde hay presencia de un objeto.
-* **Alerta Roja (z):** Salida lógica principal que se activa ($1$) si hay un objeto en *cualquier* sector **Y** su código IFF no es válido (D = 0).
+* **LEDs de Sector (A, B, C, D):** Indican visualmente el sector donde hay presencia de un objeto.
+* **Alerta Roja (z):** Salida lógica principal que se activa ($1$) si hay un objeto en *cualquier* sector **Y** su código IFF no es válido (E = 0).
 
 
 ##  Lógica Booleana y Ecuaciones
