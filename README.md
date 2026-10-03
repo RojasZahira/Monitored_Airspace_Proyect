@@ -36,9 +36,42 @@ $$Z = (A \lor B \lor C \lor D) \land \neg E$$
 * **$\land$ (AND / Y lógico):** Es la compuerta final que vincula las dos condiciones indispensables. Exige obligatoriamente que haya presencia en el espacio aéreo **Y AL MISMO TIEMPO** que el código IFF no sea válido para disparar la Alerta Roja ($Z = 1$).
 
 ### Tabla de verdad
+## 📊 Tabla de Verdad del Sistema
 
-A | B | C | D | E | A+B+C+D |  \neg E$$ | Z 
-0 | 0 | 0 | 0 | 0 |    0    | 1         | 0
+| $A$ (Norte) | $B$ (Sur) | $C$ (Este) | $D$ (Oeste) | $E$ (IFF Válido) | Presencia $(A \lor B \lor C \lor D)$ | $\neg E$ | Salida Alerta ($S$) | Estado del Espacio Aéreo |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| 0 | 0 | 0 | 0 | 0 | 0 | 1 | **0** | Seguro (Sin blancos) |
+| 0 | 0 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Oeste** |
+| 0 | 0 | 1 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Este** |
+| 0 | 0 | 1 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Este/Oeste)** |
+| 0 | 1 | 0 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Sur** |
+| 0 | 1 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Sur/Oeste)** |
+| 0 | 1 | 1 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Sur/Este)** |
+| 0 | 1 | 1 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos múltiples** |
+| 1 | 0 | 0 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Norte** |
+| 1 | 0 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Norte/Oeste)** |
+| 1 | 0 | 1 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Norte/Este)** |
+| 1 | 0 | 1 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos múltiples** |
+| 1 | 1 | 0 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Norte/Sur)** |
+| 1 | 1 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos múltiples** |
+| 1 | 1 | 1 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos múltiples** |
+| 1 | 1 | 1 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Todos los sectores vulnerados** |
+| 0 | 0 | 0 | 0 | 1 | 0 | 0 | **0** | Tráfico autorizado (Despejado) |
+| 0 | 0 | 0 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado en Oeste |
+| 0 | 0 | 1 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Este |
+| 0 | 0 | 1 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado en Este/Oeste |
+| 0 | 1 | 0 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Sur |
+| 0 | 1 | 0 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado en Sur/Oeste |
+| 0 | 1 | 1 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Sur/Este |
+| 0 | 1 | 1 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado múltiple |
+| 1 | 0 | 0 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Norte |
+| 1 | 0 | 0 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado en Norte/Oeste |
+| 1 | 0 | 1 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Norte/Este |
+| 1 | 0 | 1 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado múltiple |
+| 1 | 1 | 0 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Norte/Sur |
+| 1 | 1 | 0 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado múltiple |
+| 1 | 1 | 1 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado múltiple |
+| 1 | 1 | 1 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado masivo |
 
 
 
