@@ -36,16 +36,3 @@ $$S = (A \lor B \lor C \lor D) \land \neg E$$
 * **$\land$ (AND / Y lógico):** Es la compuerta final que vincula las dos condiciones indispensables. Exige obligatoriamente que haya presencia en el espacio aéreo **Y AL MISMO TIEMPO** que el código IFF no sea válido para disparar la Alerta Roja ($S = 1$).
 
 
-###  Diagrama Esquemático del Circuito Lógico
-
-
-A ----+
-      |---> [ OR ] ---\
-B ----+                |
-                       |---> [ OR ] ---\
-C ----+                |                |
-      |---> [ OR ] ---/                 |---> [ AND ] ----> S (LED Alerta Roja)
-D ----+                                 |                
-                                        |                
-Entrada IFF (74LS04)                    |                                 |                
-E -------------------------> [ NOT ] ---/
