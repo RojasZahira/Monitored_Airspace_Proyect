@@ -18,7 +18,7 @@ Al no utilizar microcontroladores ni ciclos de reloj (circuitos secuenciales), e
 
 ### Salidas (Indicadores)
 * **LEDs de Sector (A, B, C):** Indican visualmente el sector donde hay presencia de un objeto.
-* **Alerta Roja (S):** Salida lógica principal que se activa ($1$) si hay un objeto en *cualquier* sector **Y** su código IFF no es válido (D = 0).
+* **Alerta Roja (z):** Salida lógica principal que se activa ($1$) si hay un objeto en *cualquier* sector **Y** su código IFF no es válido (D = 0).
 
 
 ##  Lógica Booleana y Ecuaciones
