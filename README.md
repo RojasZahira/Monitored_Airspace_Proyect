@@ -1,4 +1,4 @@
-# Sistema de Radar Combinacional de Vigilancia Aeroespacial
+# Monitored Airspace Project
 
 Proyecto desarrollado para la materia **Electrónica Digital**.
 
@@ -20,6 +20,36 @@ Al no utilizar microcontroladores ni ciclos de reloj (circuitos secuenciales), e
 * **LEDs de Sector (A, B, C):** Indican visualmente el sector donde hay presencia de un objeto.
 * **Alerta Roja (S):** Salida lógica principal que se activa ($1$) si hay un objeto en *cualquier* sector **Y** su código IFF no es válido (D = 0).
 
-### Lógica Booleana y Ecuación 
-* **Ecuación:** Z=(A+B+C+D)xE$$
 
+##  Lógica Booleana y Ecuaciones
+
+Para diseñar el sistema utilizando exclusivamente **lógica combinacional pura**, se aplicaron las leyes del Álgebra de Boole. Esto permite procesar las señales de manera instantánea mediante compuertas lógicas estándar (familias TTL/CMOS), sin necesidad de microcontroladores ni ciclos de reloj.
+
+### Función Lógica del Sistema
+La condición de Alerta Roja ($S$) se define formalmente con la siguiente ecuación:
+
+$$S = (A \lor B \lor C \lor D) \land \neg E$$
+
+### Desglose de los Operadores Lógicos:
+* **$\lor$ (OR / O inclusivo):** Utilizado en el bloque $(A \lor B \lor C \lor D)$. Funciona como un selector múltiple: si se detecta un objeto en *cualquier* punto cardinal, toda esta sección se vuelve verdadera ($1$).
+* **$\neg$ (NOT / Negación):** Aplicado sobre la señal IFF ($\neg E$). Su función es invertir el estado del código de identificación para detectar específicamente cuando la aeronave **no** cuenta con autorización válida.
+* **$\land$ (AND / Y lógico):** Es la compuerta final que vincula las dos condiciones indispensables. Exige obligatoriamente que haya presencia en el espacio aéreo **Y AL MISMO TIEMPO** que el código IFF no sea válido para disparar la Alerta Roja ($S = 1$).
+
+
+###  Diagrama Esquemático del Circuito Lógico
+
+
+Entradas de Sectores                Bloque OR (74LS32)              Bloque Final (74LS08)
+---------------------             ----------------------            ----------------------
+
+A ----+
+      |---> [ OR ] ---\
+B ----+                |
+                       |---> [ OR ] ---\
+C ----+                |                |
+      |---> [ OR ] ---/                 |---> [ AND ] ----> S (LED Alerta Roja)
+D ----+                                 |                
+                                        |                
+Entrada IFF (74LS04)                    |                
+---------------------                   |                
+E -------------------------> [ NOT ] ---/
