@@ -23,7 +23,7 @@ Al no utilizar microcontroladores ni ciclos de reloj (circuitos secuenciales), e
 
 ##  Lógica Booleana y Ecuaciones
 
-Para diseñar el sistema utilizando exclusivamente **lógica combinacional pura**, se aplicaron las leyes del Álgebra de Boole. Esto permite procesar las señales de manera instantánea mediante compuertas lógicas estándar (familias TTL/CMOS), sin necesidad de microcontroladores ni ciclos de reloj.
+Para diseñar el sistema utilizando exclusivamente **lógica combinacional pura**, se aplicaron las leyes del Álgebra de Boole.
 
 ### Función Lógica del Sistema
 La condición de Alerta Roja ($S$) se define formalmente con la siguiente ecuación:
