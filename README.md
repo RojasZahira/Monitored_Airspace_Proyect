@@ -39,9 +39,6 @@ $$S = (A \lor B \lor C \lor D) \land \neg E$$
 ###  Diagrama Esquemático del Circuito Lógico
 
 
-Entradas de Sectores                Bloque OR (74LS32)              Bloque Final (74LS08)
----------------------             ----------------------            ----------------------
-
 A ----+
       |---> [ OR ] ---\
 B ----+                |
@@ -50,6 +47,5 @@ C ----+                |                |
       |---> [ OR ] ---/                 |---> [ AND ] ----> S (LED Alerta Roja)
 D ----+                                 |                
                                         |                
-Entrada IFF (74LS04)                    |                
----------------------                   |                
+Entrada IFF (74LS04)                    |                                 |                
 E -------------------------> [ NOT ] ---/
