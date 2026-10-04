@@ -5,7 +5,7 @@ Proyecto desarrollado para la materia **Electrónica Digital**.
 ## Descripción del Proyecto
 Este proyecto consiste en un sistema digital de alerta temprana basado exclusivamente en **lógica combinacional pura**. Su función principal es simular el monitoreo del espacio aéreo de una nación, detectando la presencia de aeronaves u objetos en diferentes sectores y evaluando de forma instantánea si representan una actividad inesperada (intrusión o aeronave sin identificación válida) mediante compuertas lógicas y Álgebra de Boole.
 
-Al no utilizar microcontroladores ni ciclos de reloj (circuitos secuenciales), el sistema responde de manera inmediata y determinista a las combinaciones de entradas binarias aplicadas en los sensores.
+
 
 ##  Variables del Sistema
 
