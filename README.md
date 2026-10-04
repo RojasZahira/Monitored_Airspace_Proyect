@@ -1,4 +1,33 @@
-# Avances sobre el proyecto
+# Avances sobre el proyecto y materiales
+
+##  Prototipo de Radar Satelital - Lista de Materiales 
+
+Este documento detalla los componentes de hardware necesarios para construir el prototipo de radar satelital basado en Arduino Uno, con simulación de sistema IFF (Identificación Amigo-Enemigo) y reporte de alertas a la PC.
+
+
+## Lista de Componentes
+
+| Componente | Cantidad | Propósito |
+| :--- | :---: | :--- |
+| **Arduino Uno** | 1 | Microcontrolador central que procesa la ecuación lógica y la comunicación serial. |
+| **Cable USB (A a B)** | 1 | Conecta el Arduino a la PC para cargar el código y recibir los registros de alerta en tiempo real. |
+| **Sensores Infrarrojos de Obstáculos** *(ej. E18-D80NK o TCRT5000)* | 4 | Detectan la presencia de objetos o aeronaves cruzando los sectores $A, B, C$ y $D$. |
+| **Módulo RFID RC522** *(incluye llaveros/tarjetas)* | 1 | Simula el sistema IFF basado en transpondedor para la identificación de aeronaves amigas ($E$). |
+| **Protoboard (Placa de pruebas)** | 1 a 2 | Utilizada para realizar el conexionado y distribuir alimentación y tierra. |
+| **Cables de conexión (Jumpers)** *(Macho-Macho, Macho-Hembra)* | 1 Set | Interconectan los sensores y el módulo RFID con el Arduino Uno. |
+
+
+
+##  Resumen de Lógica del Sistema
+
+El prototipo procesa la ecuación lógica digital utilizando las entradas de los componentes conectados:
+
+$$S = (A \lor B \lor C \lor D) \land \neg E$$
+
+* **Sectores ($A, B, C, D$):** Activados por los sensores infrarrojos de obstáculos.
+* **Señal IFF ($E$):** Activada al escanear la tarjeta o llavero RFID autorizado.
+* **Salida de Alerta ($S$):** Evaluada internamente por el Arduino y reportada a la PC mediante el puerto Serial/USB cuando se detecta un objeto no registrado.
+
 
 ## 04/10 
 Armado del tinkercad para el circuito y la estructura.
