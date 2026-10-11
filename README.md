@@ -1,42 +1,20 @@
 # Monitored Airspace Project
-
-Proyecto desarrollado para la materia **Electrónica Digital**.
-
-## Descripción del Proyecto
-Este proyecto consiste en un sistema digital de alerta temprana basado  en **lógica combinacional pura**. Su función principal es simular el monitoreo del espacio aéreo de una nación, detectando la presencia de aeronaves u objetos en diferentes sectores y evaluando de forma instantánea si representan una actividad inesperada (intrusión o aeronave sin identificación válida) mediante compuertas lógicas y Álgebra de Boole.
+**Monitored Airspace Proyect** es un dispositivo con la estructura y funcionamiento básico de un satélite, pero utiliza la tecnología de un radar para simular el monitoreo del espacio aéreo de una nación, detectando la presencia de aeronaves en diferentes sectores y evaluando de forma instantánea si hay actividad inesperada. 
 
 
+##  Partes del sistema
 
-##  Variables del Sistema
-
-### Entradas (Sensores / Simulación por Dip Switch)
+### Los ceros y unos son las respuestas que da el sistema en caso de detectar una aeronave
 * **A (Sector Norte):** 1 si se detecta un objeto, 0 si está despejado.
 * **B (Sector Sur):** 1 si se detecta un objeto, 0 si está despejado.
 * **C (Sector Este):** 1 si se detecta un objeto, 0 si está despejado.
 * **D (Sector Oeste):** 1 si detecta un objeto, 0 si está despejado.
-* **E (Códifo IFF):** 1 si el código de transpondedor es válido (Amigo), $0$ si es desconocido o no responde (Amenaza). 
-
-### Salidas (Indicadores)
-* **LEDs de Sector (A, B, C, D):** Indican visualmente el sector donde hay presencia de un objeto.
-* **Alerta Roja (z):** Salida lógica principal que se activa ($1$) si hay un objeto en *cualquier* sector **Y** su código IFF no es válido (E = 0).
-
-
-##  Lógica Booleana y Ecuaciones
-
-Para diseñar el sistema utilizando exclusivamente **lógica combinacional pura**, se aplicaron las leyes del Álgebra de Boole.
+* **E (Códifo IFF):** 1 si el código de transpondedor es válido (Amigo), $0$ si es desconocido o no responde (Amenaza).
 
 ### Función Lógica del Sistema
-La condición de Alerta Roja ($Z$) se define formalmente con la siguiente ecuación:
 
 $$Z = (A \lor B \lor C \lor D) \land \neg E$$
 
-### Desglose de los Operadores Lógicos:
-* **$\lor$ (OR / O inclusivo):** Utilizado en el bloque $(A \lor B \lor C \lor D)$. Funciona como un selector múltiple: si se detecta un objeto en *cualquier* punto cardinal, toda esta sección se vuelve verdadera ($1$).
-* **$\neg$ (NOT / Negación):** Aplicado sobre la señal IFF ($\neg E$). Su función es invertir el estado del código de identificación para detectar específicamente cuando la aeronave **no** cuenta con autorización válida.
-* **$\land$ (AND / Y lógico):** Es la compuerta final que vincula las dos condiciones indispensables. Exige obligatoriamente que haya presencia en el espacio aéreo **Y AL MISMO TIEMPO** que el código IFF no sea válido para disparar la Alerta Roja ($Z = 1$).
-
-### Tabla de verdad
-## 📊 Tabla de Verdad del Sistema
 
 | $A$ (Norte) | $B$ (Sur) | $C$ (Este) | $D$ (Oeste) | $E$ (IFF Válido) | Presencia $(A \lor B \lor C \lor D)$ | $\neg E$ | Salida Alerta ($Z$) | Estado del Espacio Aéreo |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
