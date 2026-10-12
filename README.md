@@ -2,7 +2,7 @@
 
 ##  Prototipo de Radar Satelital - Lista de Materiales 
 
-Este documento detalla los componentes de hardware necesarios para construir el prototipo de radar satelital basado en Arduino Uno, con simulación de sistema IFF (Identificación Amigo-Enemigo) y reporte de alertas a la PC.
+Este documento detalla los componentes de hardware necesarios para construir el prototipo de radar satelital.
 
 
 ## Lista de Componentes
@@ -22,7 +22,7 @@ Este documento detalla los componentes de hardware necesarios para construir el 
 
 El prototipo procesa la ecuación lógica digital utilizando las entradas de los componentes conectados:
 
-$$S = (A \lor B \lor C \lor D) \land \neg E$$
+$$Z = (A \lor B \lor C \lor D) \land \neg E$$
 
 * **Sectores ($A, B, C, D$):** Activados por los sensores infrarrojos de obstáculos.
 * **Señal IFF ($E$):** Activada al escanear la tarjeta o llavero RFID autorizado.
