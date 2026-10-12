@@ -26,7 +26,7 @@ $$Z = (A \lor B \lor C \lor D) \land \neg E$$
 
 * **Sectores ($A, B, C, D$):** Activados por los sensores infrarrojos de obstáculos.
 * **Señal IFF ($E$):** Activada al escanear la tarjeta o llavero RFID autorizado.
-* **Salida de Alerta ($S$):** Evaluada internamente por el Arduino y reportada a la PC mediante el puerto Serial/USB cuando se detecta un objeto no registrado.
+* **Salida de Alerta ($Z$):** Evaluada internamente por el Arduino y reportada a la PC mediante el puerto Serial/USB cuando se detecta un objeto no registrado.
 
 
 ## 04/10 
