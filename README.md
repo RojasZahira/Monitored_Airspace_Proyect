@@ -5,12 +5,11 @@
 ##  Partes del sistema
 
 ### Los ceros y unos son las respuestas que da el sistema en caso de detectar una aeronave
-* **A (Sector Norte):** 1 si se detecta un objeto, 0 si está despejado.
-* **B (Sector Sur):** 1 si se detecta un objeto, 0 si está despejado.
-* **C (Sector Este):** 1 si se detecta un objeto, 0 si está despejado.
-* **D (Sector Oeste):** 1 si detecta un objeto, 0 si está despejado.
-* **E (Códifo IFF):** 1 si el código de transpondedor es válido (Amigo), $0$ si es desconocido o no responde (Amenaza).
-
+* **A (Prohibida):** 1 si se detecta un objeto, 0 si está despejado.
+* **B (Habilitada 1):** 1 si se detecta un objeto, 0 si está despejado.
+* **C (Habilitada 2):** 1 si se detecta un objeto, 0 si está despejado.
+Z1(LED verde)
+Z2(LED roja)
 ### Función Lógica del Sistema
 
 $$Z = (A \lor B \lor C \lor D) \land \neg E$$
