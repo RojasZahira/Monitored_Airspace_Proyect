@@ -1,0 +1,47 @@
+Sensor de movimiento PIR
+Son un tipo de sensor óptico muy utilizado para detectar movimiento de personas o animales. 
+
+Constitución interna de un sensor PIR
+Uno de los módulos más comunes es el HC-SR501, ampliamente usado en proyectos con Arduino, Raspberry Pi y sistemas de control automatizados.
+Este módulo está formado principalmente por dos elementos:
+Lente Fresnel: concentra la radiación infrarroja hacia el sensor.
+Sensor PIR: compuesto por dos elementos sensibles a la radiación infrarroja.
+El sensor detecta diferencias en la radiación entre ambos elementos. Cuando un objeto en movimiento (como una persona) pasa frente al sensor, se generan variaciones que el sistema interpreta como movimiento detectado.
+
+Los sensores PIR no detectan luz visible, sino radiación infrarroja emitida por todos los cuerpos cuya temperatura sea superior al cero absoluto.
+Seres humanos y animales emiten calor en el rango infrarrojo.
+El sensor percibe estos cambios gracias a un material piroelectrico, el cual altera su conductividad cuando varía la radiación recibida.
+Este cambio activa un circuito interno que genera una señal de salida digital (ON/OFF).
+
+El módulo HC-SR501 incluye dos potenciómetros que permiten ajustar su funcionamiento:
+Sensibilidad (distancia de detección): hasta unos 7 metros en condiciones normales.
+Tiempo de retardo: define cuánto tiempo permanece activa la señal de salida después de una detección.
+Además, se puede configurar en dos modos:
+Disparo único: solo emite una señal al detectar movimiento.
+Disparo repetitivo: genera múltiples pulsos mientras haya movimiento en el área de detección.
+
+Entradas y salidas
+Cuenta principalmente con pines de alimentación, una entrada de configuración y una salida de señal digital
+Entradas (Alimentación y Configuración)
+• VCC (Entrada de alimentación): Recibe voltaje continuo, generalmente entre 4.5 V y 20 V (en la mayoría de módulos estándar se alimenta con 5 V).
+• GND (Tierra): Conexión al polo negativo o masa del circuito.
+• Potenciómetro de Sensibilidad (Entrada analógica/mecánica interna): Permite ajustar qué tan lejos o qué tan sensible es el sensor ante los cambios de temperatura (rango de detección de 3 a 7 metros).
+• Potenciómetro de Tiempo (Entrada de ajuste): Define cuánto tiempo permanece activa la señal de salida tras detectar movimiento (ajustable desde unos 3–5 segundos hasta 5 minutos).
+• Jumper de Modo (Entrada de selección): Permite elegir entre disparo único (mono-disparo) o disparo repetitivo (retriggerable).
+
+Salidas
+
+• OUT (Salida de señal digital):
+	• Estado Alto (HIGH): Entrega un voltaje lógico de 3.3 V o 5 V (según el módulo) cuando detecta movimiento de una fuente de calor (como una persona o animal).
+	• Estado Bajo (LOW): Entrega 0 V cuando no hay movimiento o la señal de alarma ha expirado. Esta salida se puede conectar directamente a un pin digital de una placa como Arduino para leer el estado.
+
+FPGA TANG NANO 9K
+Placa de desarrollo compacta basada en un chip FPGA del fabricante Gowin
+Un FPGA (Field-Programmable Gate Array o Matriz de Puertas Programables en Campo) es un circuito integrado que puedes configurar y reprogramar después de fabricarlo. A diferencia de un microcontrolador (que tiene una CPU y periféricos fijos), el FPGA te permite «dibujar» o construir tu propio procesador, circuitos lógicos y hardware personalizado desde cero utilizando lenguajes de descripción de hardware como Verilog o VHDL.
+
+Características principales de la Tang Nano 9K
+
+• Capacidad lógica: Cuenta con 8.640 unidades lógicas (LUT4).
+• Memorias: Incluye 64 Mbit de PSRAM, 32 Mbit de memoria Flash y lector de tarjeta MicroSD.
+• Conectividad y vídeo: Viene con salidas de vídeo HDMI, conector para pantalla LCD RGB, interfaz SPI y 6 LEDs integrados.
+• Programación sencilla: Integra un chip (BL702) que facilita la depuración y carga del código mediante un puerto USB-C, sin necesidad de cables de programación costosos.
