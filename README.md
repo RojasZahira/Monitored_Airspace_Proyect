@@ -15,40 +15,14 @@ Z2(LED roja)
 $$Z = (A + B + C)( \neg A + B + C)$$
 
 
-| $A$ (Norte) | $B$ (Sur) | $C$ (Este) | $D$ (Oeste) | $E$ (IFF Válido) | Presencia $(A \lor B \lor C \lor D)$ | $\neg E$ | Salida Alerta ($Z$) | Estado del Espacio Aéreo |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| 0 | 0 | 0 | 0 | 0 | 0 | 1 | **0** | Seguro (Sin blancos) |
-| 0 | 0 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Oeste** |
-| 0 | 0 | 1 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Este** |
-| 0 | 0 | 1 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Este/Oeste)** |
-| 0 | 1 | 0 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Sur** |
-| 0 | 1 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Sur/Oeste)** |
-| 0 | 1 | 1 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Sur/Este)** |
-| 0 | 1 | 1 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos múltiples** |
-| 1 | 0 | 0 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intruso en Norte** |
-| 1 | 0 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Norte/Oeste)** |
-| 1 | 0 | 1 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Norte/Este)** |
-| 1 | 0 | 1 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos múltiples** |
-| 1 | 1 | 0 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos (Norte/Sur)** |
-| 1 | 1 | 0 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos múltiples** |
-| 1 | 1 | 1 | 0 | 0 | 1 | 1 | **1** |  **ALERTA: Intrusos múltiples** |
-| 1 | 1 | 1 | 1 | 0 | 1 | 1 | **1** |  **ALERTA: Todos los sectores vulnerados** |
-| 0 | 0 | 0 | 0 | 1 | 0 | 0 | **0** | Tráfico autorizado (Despejado) |
-| 0 | 0 | 0 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado en Oeste |
-| 0 | 0 | 1 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Este |
-| 0 | 0 | 1 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado en Este/Oeste |
-| 0 | 1 | 0 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Sur |
-| 0 | 1 | 0 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado en Sur/Oeste |
-| 0 | 1 | 1 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Sur/Este |
-| 0 | 1 | 1 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado múltiple |
-| 1 | 0 | 0 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Norte |
-| 1 | 0 | 0 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado en Norte/Oeste |
-| 1 | 0 | 1 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Norte/Este |
-| 1 | 0 | 1 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado múltiple |
-| 1 | 1 | 0 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado en Norte/Sur |
-| 1 | 1 | 0 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado múltiple |
-| 1 | 1 | 1 | 0 | 1 | 1 | 0 | **0** | Tráfico autorizado múltiple |
-| 1 | 1 | 1 | 1 | 1 | 1 | 0 | **0** | Tráfico autorizado masivo |
-
-
+| $A$  | $B$ | $C$ | $Z1$ | $Z2$ | 
+| :---: | :---: | :---: | :---: | :---: |
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 0 | 1 | 
+| 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 
+| 1 | 1 | 1 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 1 | 
 
