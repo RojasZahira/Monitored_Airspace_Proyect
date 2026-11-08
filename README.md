@@ -12,7 +12,7 @@ Z1(LED verde)
 Z2(LED roja)
 ### Función Lógica del Sistema
 
-$$Z = (A + B + C)(\land \neg A + B + C)$$
+$$Z = (A + B + C)( \neg A + B + C)$$
 
 
 | $A$ (Norte) | $B$ (Sur) | $C$ (Este) | $D$ (Oeste) | $E$ (IFF Válido) | Presencia $(A \lor B \lor C \lor D)$ | $\neg E$ | Salida Alerta ($Z$) | Estado del Espacio Aéreo |
